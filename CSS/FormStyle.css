@@ -1,0 +1,92 @@
+* {
+     margin: 0;
+     padding: 0;
+     font-family: 'Roboto',sans-serif;
+     color:black ;
+    
+}
+body {
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+ header {
+     /*background-image: linear-gradient(to right,white 9%,#43b549 100%);*/
+     background-color: white;
+      color: white;
+      display: flex;
+      align-items: center;
+      height: 50px;
+ }
+
+ header span {
+     width:200px;
+     padding: 10px;
+     color: gray;
+     margin-left: 200px;
+}
+ .person{
+     padding: 10px;
+     width: 50px;
+     height: 50px;
+     display: inline-block;
+     position: absolute;
+     right: 10px;
+     color: gray; 
+ }
+ 
+ 
+.direita {
+      padding: 10px;   
+      color: gray; 
+      display: inline-block;
+      position: absolute;
+      right: 90px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      margin-bottom: 10px;
+ }
+
+ .esquerda {
+     padding: 10px;   
+     color: gray; 
+     display: inline-block;
+     position: absolute;
+     left: 210px;
+     font-size: 13pt;
+}
+
+.menu {
+     width: 100px;
+     height:94vh;
+    
+     float: left;
+}
+.meio {
+     height:100vh;
+     width: 1800px;
+}
+
+.form {
+width: 1660px;
+float: left;
+margin-left: 20px;
+margin-top: 10px;
+
+}
+
+.logo{
+       
+     color: gray; 
+     display: inline-block;
+     position: absolute;
+     left: 2px;
+     width: 190px;
+}
+h4{
+     font-size: 9pt;
+     margin-top: 10px;
+     margin-left: 9px;
+     color:gray ;
+}

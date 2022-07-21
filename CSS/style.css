@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: 'Roboto',sans-serif;
+     color:#777777 ;
+    
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+
+.container {
+     display: flex;
+     justify-content: left;
+     width: 100%;
+     margin-top: 10%;   
+}
+
+.card {
+     background-color:rgba(255, 255, 255,100);
+     backdrop-filter: blur(10px);
+     padding: 0px;
+     margin-left: 15%;
+     padding-top: 50px;
+}
+
+.card img {
+    width: 70%;
+    padding: 5px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+     text-align: center;
+     margin: 20px;
+     font-size: 20pt;
+}
+
+h2{
+     text-align: center;
+     margin-bottom:20px;
+     margin-top: 20px;
+     font-size: 17pt;  
+}
+
+.label-float input{
+    width: 300px; 
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #b2b2b2;
+    background-color: transparent;
+    outline: none;
+    min-width: 100px;
+    font-size: 14pt;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    height: 60;
+
+}
+
+
+.label-float{
+     position: relative;
+     padding-top: 13px;
+     margin-top: 5%;
+     margin-bottom: 5%;
+}
+
+.label-float input:focus{
+     border-bottom: 2px solid #474747;
+}
+
+.label-float label{
+     pointer-events:none;
+     position: absolute;
+     top: 0;
+     left: 0;
+     margin-top: 13px;  
+     transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+     font-size: 13px;
+     margin-top: 0;
+     color: #474747;
+}
+         
+.justify-center button{
+     background-image: linear-gradient(to right, #b2d234  55%,#43b549 100%);
+     color: white;
+     padding: 7px;
+     font-weight: bold;
+     font-size: 14pt;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     border-radius: 20px;
+     cursor:pointer;
+     width: 100%;
+     border: none;
+     height: 45px;
+     width: 300px;
+}
+
+button:hover{
+     background-image: linear-gradient(to right,#43b549  0%,#b2d234 100%);
+     transition: all .3s ease-out;
+     color: #777777;
+}
+
+.btn button{
+     background-image: linear-gradient(to right,rgb(168, 36, 168) 40%,rgb(66, 2, 66) 100%);
+}
+
+.btn2{
+     margin-bottom: 50px;
+}
+.justify-center{
+     display: flex;
+     justify-content: center;
+}
+
+.justify-center2{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 300px;
+}
+
+hr{
+     margin-top: 10%;
+     margin-bottom: 10%;
+     width: 400px
+}
+
+p{
+     font-size: 14pt;
+     text-align: center;
+     margin-bottom: 15px;
+}
+
+a{
+     color:#782b90;
+     font-weight: bold;
+     text-decoration: none;
+}
+a:hover{
+     color: #474747;
+     transition: all .3s ease-out;
+}
+
+.primeiro{
+     width: 250px;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px black solid;
+     padding: 10px;
+     border-radius: 10px;
+     text-align: center;
+     margin-bottom: 30px;
+}
