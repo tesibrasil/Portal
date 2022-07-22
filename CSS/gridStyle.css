@@ -100,7 +100,54 @@ header {
 
 .dropborder{
      border: 1px solid rgb(177, 177, 177);
+     padding: 5px;
+     border-radius: 10px;
+     margin-right: 5px;
+     height: 45px;
+}
+
+.btnborder{
+     border: 1px solid rgb(177, 177, 177);
      padding: 1px;
      border-radius: 10px;
      margin-right: 10px;
+     height: 45px; 
+}
+
+.pesq{
+     width: 250px;
+
+}
+
+.bloco{
+     padding: 10px;
+}
+
+.sombra{
+    
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+tr th{
+     color: #777777;
+     height: 60px;
+}
+
+tr td{
+     height: 60px;
+}
+
+table {
+     margin: 10px;
+     padding: 20px;
+     
+}
+
+.tamcol{
+     width: 10px;
+}
+
+td div {
+     margin-left: -20px;
 }

@@ -1,34 +1,48 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
 
 <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link href="css/gridStyle.css" rel="stylesheet" />
+
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
      <title>Grid</title>
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
+<!--style="background-image:url('Assets/Pharma6.jpg')"-->
 
-<body style="background-image:url('Assets/Pharma6.jpg')">
+<body>
      <header>
-          <img src="Assets/Logo4.png" />
+          <div class="container-fluid">
+               <img src="Assets/Logo4.png" />
 
-          <h2>Vitor Avila</h2>
+               <h2>Vitor Avila</h2>
 
-          <image class="person" src="Assets/person2.png"></image>
-
+               <image class="person" src="Assets/person2.png"></image>
+          </div>
      </header>
 
-     <nav class="navbar bg-light">
-          <div class="container-fluid">
-               <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Nome do Exame" aria-label="Search">
 
-                    <div class="dropdown dropborder">
-                         <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+     <div class="container-fluid bg-light bloco sombra">
+          <div class="row">
+               <div class="col-4">
+                    <input class="form-control me-2" type="search" placeholder="Nome do Exame" aria-label="Search">
+               </div>
+               <div class="col"></div>
+               <div class="col align-self-end">
+                    <div class="dropdown">
+                         <button class="dropdown-toggle dropborder" type="button" data-bs-toggle="dropdown"
                               aria-expanded="false">
                               Selecione o período
                          </button>
@@ -39,35 +53,199 @@
 
                          </ul>
                     </div>
+               </div>
+               <div class="col align-self-end min-vw-20">
 
-                    <div class="input-group date" data-provide="datepicker">
-                         <input type="text" class="form-control me-2 id=" datepicker">
-                         <div class="input-group-addon">
-                              <span class="glyphicon glyphicon-th"></span>
-                         </div>
+                    <div class="input-group date" id="startDate">
+                         <input type="text" class="form-control">
+                         <span class="input-group-append">
+                              <button class="btn btn-light border border-start-0 rounded-end btnborder">
+                                   <i class="fa fa-calendar"></i>
+                              </button>
+                         </span>
                     </div>
+               </div>
 
-                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-               </form>
+               <div class="col align-self-end">
+
+                    <div class="input-group date" id="endDate">
+                         <input type="text" class="form-control">
+                         <span class="input-group-append">
+                              <button class="btn btn-light border border-start-0 rounded-end btnborder">
+                                   <i class="fa fa-calendar"></i>
+                              </button>
+                         </span>
+                    </div>
+               </div>
+
+               <div class="col align-self-end">
+                    <button class="btn btn-outline-primary pesq" type="submit">Pesquisar</button>
+               </div>
           </div>
-     </nav>
 
-     <div class="position-relative bg-danger">
-          <div class="position-absolute top-0 start-0"></div>
-          <div class="position-absolute top-0 end-0"></div>
-          <div class="position-absolute top-50 start-50"></div>
-          <div class="position-absolute bottom-50 end-50"></div>
-          <div class="position-absolute bottom-0 start-0"></div>
-          <div class="position-absolute bottom-0 end-0"></div>
+
      </div>
+     <!--Container-->
 
 
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-          integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-          crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-          integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-          crossorigin="anonymous"></script>
+     <table class="table table-striped table-hover">
+          <thead>
+               <tr>
+                    <th scope="col">Data da Solicitação</th>
+                    <th scope="col">Exame</th>
+                    <th scope="col">Unidade Solicitante</th>
+                    <th scope="col">Data de Entrega</th>
+                    <th scope="col">Resultado</th>
+                    <th scope="col">Nota</th>
+               </tr>
+          </thead>
+          <tbody class="table-group-divider">
+               <tr>
+                    <td>10/07/2022</td>
+                    <td>Anatomo Patológico</td>
+                    <td>Hospital Samariano Paulista</td>
+                    <td>25/07/2022</td>
+                    <td>
+                         <div class="row">
+
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file-o"></i><br>
+                                        <b>laudo</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+
+                              </div>
+
+                         </div>
+
+                    </td>
+                    <td></td>
+               </tr>
+               <tr>
+                    <td>12/07/2022</td>
+                    <td>Patologia Molecular</td>
+                    <td>Hospital Paulistano</td>
+                    <td>22/07/2022</td>
+                    <td>
+                         <div class="row">
+
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file-o"></i><br>
+                                        <b>laudo</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+
+                              </div>
+
+                         </div>
+                    </td>
+                    <td>Recoleta de material</td>
+               </tr>
+               <tr>
+                    <td>05/07/2022</td>
+                    <td>Citologia de Liquido</td>
+                    <td>Hospital Higieópolis</td>
+                    <td>19/07/2022</td>
+                    <td>
+
+                         <div class="row">
+
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo em</b><br>
+                                        <b>inglês</b>
+                                   </div>
+                              </div>
+                         </div>
+                    </td>
+
+                    <td>
+
+                    </td>
+               </tr>
+               <tr>
+                    <td>04/07/2022</td>
+                    <td>Anatomo Patológico</td>
+                    <td>Hospital Samariano Paulista</td>
+                    <td>18/07/2022</td>
+                    <td>
+                         <div class="row">
+
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo</b><br>
+                                        <b>complementar</b>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </td>
+                    <td></td>
+               </tr>
+               <tr>
+                    <td>04/07/2022</td>
+                    <td>Anatomo Patológico</td>
+                    <td>Hospital Samariano Paulista</td>
+                    <td>18/07/2022</td>
+                    <td>
+                         <div class="row">
+
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo em</b><br>
+                                        <b>inglês</b>
+                                   </div>
+                              </div>
+                              <div class="col">
+                                   <div>
+                                        <i class="fa fa-file"></i><br>
+                                        <b>laudo</b><br>
+                                        <b>complementar</b>
+                                   </div>
+                              </div>
+                         </div>
+                    </td>
+                    <td>Este laudo substitui o anterior</td>
+               </tr>
+          </tbody>
+     </table>
+
+
+     <!--Script-->
+
+     <script type="text/javascript">
+          $(function () {
+               $('#startDate').datepicker();
+               $('#endDate').datepicker();
+          });
+
+     </script>
+
 
 </body>
 
